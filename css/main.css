@@ -22,6 +22,14 @@ body,html{
 .nav--buttons {
     margin-top: 40px;
 }
+.start-btn {
+    padding: 1.5rem 3rem;
+    font-size: 2.25rem;
+}
+
+.step-final .subtitle--big {
+    font-size: 2.5rem;
+}
 
 @media screen and (max-height: 830px) {
     .h-100 {

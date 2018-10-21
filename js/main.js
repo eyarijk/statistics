@@ -15,7 +15,12 @@ $('#restart').on('click',function () {
 $('#next').on('click',function () {
     step++;
     renderStep();
-    $(this).prop('disabled',true);
+    if (checkData()) {
+        $(this).prop('disabled',false);
+    } else {
+        $(this).prop('disabled',true);
+    }
+
 });
 
 $('#prev').on('click',function () {
@@ -84,5 +89,5 @@ function checkData() {
             return true;
         }
     }
-    return true;
+    return false;
 }
