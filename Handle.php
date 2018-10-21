@@ -5,6 +5,7 @@ namespace App\Handle;
 class Handle
 {
     private $dir;
+    private $answerDir;
 
     public static function factory()
     {
@@ -14,6 +15,7 @@ class Handle
     public function __construct()
     {
         $this->dir =  __DIR__.'/';
+        $this->answerDir = 'answers';
     }
 
     public function showForm()
@@ -32,7 +34,14 @@ class Handle
         }
 
         $fileName = date('d-m-Y H:i:s').'.txt';
-        $path = $this->dir .'answers/'.$fileName;
+        $dir = $this->dir . $this->answerDir;
+        $path = $dir .'/'.$fileName;
+
+        if (!file_exists($dir)) {
+            if (!mkdir($dir, 0777, true) && is_dir($dir)) {
+                die('Не удалось создать директории... Создайте директорию в корне проекта под названием: '. $this->answerDir);
+            }
+        }
 
         $fp = fopen($path, 'w');
 
