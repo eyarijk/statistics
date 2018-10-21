@@ -1,5 +1,5 @@
 let step = 0;
-let finalStep = 7;
+let finalStep = 9;
 
 $('#start').on('click',function () {
     step = 1;
@@ -9,16 +9,19 @@ $('#start').on('click',function () {
 $('#restart').on('click',function () {
     step = 0;
     renderStep();
+    $('#next,#save').prop('disabled',false)
 });
 
 $('#next').on('click',function () {
     step++;
     renderStep();
+    $(this).prop('disabled',true);
 });
 
 $('#prev').on('click',function () {
     step--;
     renderStep();
+    $('#next').prop('disabled',false);
 });
 
 $('#save').on('click',function () {
@@ -33,9 +36,22 @@ $('#save').on('click',function () {
     });
 });
 
+$('.form-check-input').on('click',function () {
+    if (checkData()) {
+        $('#next').prop('disabled',false);
+        if (step === finalStep) {
+            $('#save').prop('disabled',false);
+        }
+    } else {
+        $('#next,#save').prop('disabled',true);
+    }
+});
+
 function renderStep() {
     $('.step').addClass('hidden');
     $(`.step-${step}`).removeClass('hidden');
+
+    let nextButton = $('#next');
 
     if (step > 0) {
         $('.nav--buttons').removeClass('hidden');
@@ -51,9 +67,22 @@ function renderStep() {
 
     if (step === finalStep) {
         $('#save').removeClass('hidden');
-        $('#next').addClass('hidden');
+        nextButton.addClass('hidden');
     } else {
         $('#save').addClass('hidden');
-        $('#next').removeClass('hidden');
+        nextButton.removeClass('hidden');
     }
+}
+
+function checkData() {
+    let formData = $('#steps-form').serializeArray();
+
+    let nameOfInput = $(`#step${step}-1`).attr('name');
+
+    for (let item of formData) {
+        if (item.name === nameOfInput) {
+            return true;
+        }
+    }
+    return true;
 }

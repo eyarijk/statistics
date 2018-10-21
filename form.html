@@ -7,26 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Исследование</title>
     <link rel="stylesheet" href="/css/bootstrap.css">
-    <style>
-        body,html{
-            height:100%;
-        }
-        .heading--big {
-            font-size: 4.5rem;
-        }
-        .subtitle--big {
-            font-size: 2rem;
-        }
-        .hidden {
-            display: none;
-        }
-        .variant--radio * {
-            font-size: 1.75rem;
-        }
-        .form-check-input {
-            margin-top: .85rem;
-        }
-    </style>
+    <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
 <div class="container h-100">
@@ -361,6 +342,148 @@
                         </label>
                     </div>
                 </div>
+                <div class="step step-8 hidden">
+                    <p class="subtitle--big">
+                        Пожалуйста, укажите долю больных возрастом 60+ среди больных с  систолическим АД≥140 мм рт ст, которых вы принимаете в течение недели
+                    </p>
+                    <div class="form-check variant--radio">
+                        <input class="form-check-input" type="radio" name="step8" id="step8-1" value="Не практикую">
+                        <label class="form-check-label" for="step8-1">
+                            Не практикую
+                        </label>
+                    </div>
+                    <div class="form-check variant--radio">
+                        <input class="form-check-input" type="radio" name="step8" id="step8-2" value="Менее 10%">
+                        <label class="form-check-label" for="step8-2">
+                            Менее 10%
+                        </label>
+                    </div>
+                    <div class="form-check variant--radio">
+                        <input class="form-check-input" type="radio" name="step8" id="step8-3" value="Менее 20%">
+                        <label class="form-check-label" for="step8-3">
+                            Менее 20%
+                        </label>
+                    </div>
+                    <div class="form-check variant--radio">
+                        <input class="form-check-input" type="radio" name="step8" id="step8-4" value="Менее 30%">
+                        <label class="form-check-label" for="step8-4">
+                            Менее 30%
+                        </label>
+                    </div>
+                    <div class="form-check variant--radio">
+                        <input class="form-check-input" type="radio" name="step8" id="step8-5" value="Менее 40%">
+                        <label class="form-check-label" for="step8-5">
+                            Менее 40%
+                        </label>
+                    </div>
+                    <div class="form-check variant--radio">
+                        <input class="form-check-input" type="radio" name="step8" id="step8-6" value="Менее 50%">
+                        <label class="form-check-label" for="step8-6">
+                            Менее 50%
+                        </label>
+                    </div>
+                    <div class="form-check variant--radio">
+                        <input class="form-check-input" type="radio" name="step8" id="step8-7" value="Менее 60%">
+                        <label class="form-check-label" for="step8-7">
+                            Менее 60%
+                        </label>
+                    </div>
+                </div>
+                <div class="step step-9 hidden">
+                    <p class="subtitle--big">
+                        Пожалуйста, выберите все каналы, которыми вы пользовались для получения профессиональной информации за последние 3 месяца?
+                    </p>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-check variant--radio">
+                                <input class="form-check-input" type="checkbox" value=" Открытая социальная сеть" name="step9[]" id="step9-1">
+                                <label class="form-check-label" for="step9-1">
+                                    Открытая социальная сеть
+                                </label>
+                            </div>
+                            <div class="form-check variant--radio">
+                                <input class="form-check-input" type="checkbox" value="Профессиональная закрытая социальная сеть для врачей" name="step9[]" id="step9-2">
+                                <label class="form-check-label" for="step9-2">
+                                    Профессиональная закрытая социальная сеть для врачей
+                                </label>
+                            </div>
+                            <div class="form-check variant--radio">
+                                <input class="form-check-input" type="checkbox" value="Новостная е-майл рассылка от профессональной социальной сети" name="step9[]" id="step9-3">
+                                <label class="form-check-label" for="step9-3">
+                                    Новостная е-майл рассылка от профессональной социальной сети
+                                </label>
+                            </div>
+                            <div class="form-check variant--radio">
+                                <input class="form-check-input" type="checkbox" value="Сайт фармацевтической компании" name="step9[]" id="step9-4">
+                                <label class="form-check-label" for="step9-4">
+                                    Сайт фармацевтической компании
+                                </label>
+                            </div>
+                            <div class="form-check variant--radio">
+                                <input class="form-check-input" type="checkbox" value="Вебинар или он-лайн конференция от фармацевтической компании" name="step9[]" id="step9-5">
+                                <label class="form-check-label" for="step9-5">
+                                    Вебинар или он-лайн конференция от фармацевтической компании
+                                </label>
+                            </div>
+                            <div class="form-check variant--radio">
+                                <input class="form-check-input" type="checkbox" value="Специализированный сайт препарата или медицинского изделия" name="step9[]" id="step9-6">
+                                <label class="form-check-label" for="step9-6">
+                                    Специализированный сайт препарата или медицинского изделия
+                                </label>
+                            </div>
+                            <div class="form-check variant--radio">
+                                <input class="form-check-input" type="checkbox" value="Специализированный сайт проблематики заболевания" name="step9[]" id="step9-7">
+                                <label class="form-check-label" for="step9-7">
+                                    Специализированный сайт проблематики заболевания
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-check variant--radio">
+                                <input class="form-check-input" type="checkbox" value="Личная коммуникация с медицинским представителем" name="step9[]" id="step9-8">
+                                <label class="form-check-label" for="step9-8">
+                                    Личная коммуникация с медицинским представителем
+                                </label>
+                            </div>
+                            <div class="form-check variant--radio">
+                                <input class="form-check-input" type="checkbox" value="Е-майл от медицинского представителя" name="step9[]" id="step9-9">
+                                <label class="form-check-label" for="step9-9">
+                                    Е-майл от медицинского представителя
+                                </label>
+                            </div>
+                            <div class="form-check variant--radio">
+                                <input class="form-check-input" type="checkbox" value="Медицинский новостной портал" name="step9[]" id="step9-10">
+                                <label class="form-check-label" for="step9-10">
+                                    Медицинский новостной портал
+                                </label>
+                            </div>
+                            <div class="form-check variant--radio">
+                                <input class="form-check-input" type="checkbox" value="Печатный справочник лекарств" name="step9[]" id="step9-11">
+                                <label class="form-check-label" for="step9-11">
+                                    Печатный справочник лекарств
+                                </label>
+                            </div>
+                            <div class="form-check variant--radio">
+                                <input class="form-check-input" type="checkbox" value="Медицинский журнал (периодическое издание)" name="step9[]" id="step9-12">
+                                <label class="form-check-label" for="step9-12">
+                                    Медицинский журнал (периодическое издание)
+                                </label>
+                            </div>
+                            <div class="form-check variant--radio">
+                                <input class="form-check-input" type="checkbox" value="Сайт медицинского журнала" name="step9[]" id="step9-13">
+                                <label class="form-check-label" for="step9-13">
+                                    Сайт медицинского журнала
+                                </label>
+                            </div>
+                            <div class="form-check variant--radio">
+                                <input class="form-check-input" type="checkbox" value="другое" name="step9[]" id="step9-14">
+                                <label class="form-check-label" for="step9-14">
+                                    другое
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="step step-final hidden">
                     <p class="subtitle--big">
                         Спасибо за Ваше внимание. Хорошего дня и успехов в работе!
@@ -370,9 +493,9 @@
                     </p>
                 </div>
                 <div class="nav--buttons text-center hidden">
-                    <button type="button" id="prev" class="btn btn-warning btn-lg nav-step">Назад</button>
-                    <button type="button" id="next" class="btn btn-success btn-lg">Дальше</button>
-                    <button type="button" id="save" class="btn btn-success btn-lg">Сохранить результаты</button>
+                    <button type="button" id="prev" class="btn btn-warning btn-lg nav-step float-left">Назад</button>
+                    <button type="button" id="next" class="btn btn-success btn-lg float-right" disabled>Дальше</button>
+                    <button type="button" id="save" class="btn btn-success btn-lg float-right" disabled>Сохранить результаты</button>
                 </div>
             </div>
             <input type="hidden" name="steps" id="steps" value="0">

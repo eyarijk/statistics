@@ -1,0 +1,24 @@
+body,html{
+    height:100%;
+}
+.heading--big {
+    font-size: 4.5rem;
+}
+.subtitle--big {
+    font-size: 2rem;
+}
+.hidden {
+    display: none;
+}
+.variant--radio * {
+    font-size: 1.75rem;
+}
+.variant--radio {
+    margin-bottom: 15px;
+}
+.form-check-input {
+    margin-top: .85rem;
+}
+.nav--buttons {
+    margin-top: 40px;
+}

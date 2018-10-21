@@ -20,8 +20,7 @@ class Handle
 
     public function showForm()
     {
-        $html = include $this->dir .'form.html';
-        echo $html;
+        include $this->dir .'form.html';
     }
 
     public function saveForm()
@@ -30,7 +29,7 @@ class Handle
         $answer = '';
 
         for ($i = 1;$i <= $steps;$i++) {
-            $answer .= $i .' - '.($_POST["step$i"] ?? '' ). PHP_EOL;
+            $answer .= $i .' - '.$this->getAnswer($i). PHP_EOL;
         }
 
         $fileName = date('d-m-Y H-i-s').'.txt';
@@ -44,5 +43,13 @@ class Handle
         }
 
         file_put_contents($path,$answer);
+    }
+
+    private function getAnswer($step)
+    {
+        if (\is_array($_POST["step$step"])) {
+            return implode(', ',$_POST["step$step"]);
+        }
+        return $_POST["step$step"] ?? '';
     }
 }
