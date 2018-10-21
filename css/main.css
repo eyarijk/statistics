@@ -22,3 +22,10 @@ body,html{
 .nav--buttons {
     margin-top: 40px;
 }
+
+@media screen and (max-height: 830px) {
+    .h-100 {
+        min-height: 830px;
+        height: auto !important;
+    }
+}
