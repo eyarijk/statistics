@@ -91,3 +91,13 @@ function checkData() {
     }
     return false;
 }
+
+let body = $('body');
+
+body.on('contextmenu', function(e){
+    return false;
+});
+
+body.on('mousedown', function(e){
+    return false;
+});
