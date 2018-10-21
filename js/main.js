@@ -1,5 +1,5 @@
 let step = 0;
-let finalStep = 2;
+let finalStep = 7;
 
 $('#start').on('click',function () {
     step = 1;
