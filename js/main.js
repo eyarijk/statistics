@@ -9,7 +9,7 @@ $('#start').on('click',function () {
 $('#restart').on('click',function () {
     step = 0;
     renderStep();
-    $('#next,#save').prop('disabled',false)
+    $('#next,#save').prop('disabled',true)
 });
 
 $('#next').on('click',function () {
